@@ -31,6 +31,8 @@ int main(int argc, char const *argv[])
     write << width << " " << heigt<< endl;
     write << RGB << endl;
 
+    cout << tipo << endl << width << " " << heigt << endl << RGB;
+
    while (!read.eof())
         {
             read >> red;
