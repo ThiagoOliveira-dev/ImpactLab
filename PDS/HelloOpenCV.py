@@ -2,7 +2,7 @@ import cv2
 
 
 
-img = cv2.imread('lena.jpg', -1)
+img = cv2.imread("PDS/lena.jpg",-1)
 
 print("Bem vindo ao Python com OPenCV\n")
 
