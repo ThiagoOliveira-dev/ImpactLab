@@ -5,7 +5,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv.imread('lena.jpg',0)
+img = cv.imread('PDS/lena.jpg',0)
 
 
 ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
