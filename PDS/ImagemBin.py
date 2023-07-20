@@ -1,34 +1,17 @@
-import cv2 as cv
 
-import numpy as np
+import cv2
 
-from matplotlib import pyplot as plt
+img= cv2.imread ("PDS/lena.jpg")
 
+img= cv2.cvtColor (img, cv2.COLOR_BGR2GRAY)
+img = cv2.resize(img, (0,0), fx=0.5,fy=0.5)
 
-img = cv.imread('PDS/lena.jpg',0)
+adp1= cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
+adp2 = cv2.adaptiveThreshold (img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2) 
+lim, adp3= cv2.threshold (img, 0, 255, cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
 
-
-ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
-
-ret,thresh2 = cv.threshold(img,127,255,cv.THRESH_BINARY_INV)
-
-ret,thresh3 = cv.threshold(img,127,255,cv.THRESH_TRUNC)
-
-ret,thresh4 = cv.threshold(img,127,255,cv.THRESH_TOZERO)
-
-ret,thresh5 = cv.threshold(img,127,255,cv.THRESH_TOZERO_INV)
-
-
-titles = ['Original Image','BINARY','BINARY_INV','TRUNC','TOZERO','TOZERO_INV']
-
-images = [img, thresh1, thresh2, thresh3, thresh4, thresh5]
-
-for i in range(6):
-
-    plt.subplot(2,3,i+1),plt.imshow(images[i],'gray',vmin=0,vmax=255)
-
-    plt.title(titles[i])
-
-    plt.xticks([]),plt.yticks([])
-
-plt.show()
+cv2.imshow("Raw Image", img)
+cv2.imshow("LimiarAd MEAN", adp1)
+cv2.imshow("LimiarAd GAUSS", adp2)
+cv2.imshow("LimiarAd OTSU", adp3)
+cv2.waitKey (0)

@@ -5,8 +5,8 @@ import numpy as np
 img = cv2.imread('lena.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Calcula o alargamento de contraste logarítmico
-c = 255 / np.log(1 + np.max(img))
-log_image = c * (np.log(img + 1))
+a = 255 / np.log(1 + np.max(img))
+log_image = a * (np.log(img + 1))
 
 # Converte os valores de pixel para o intervalo [0, 255]
 log_image = np.uint8(log_image)
