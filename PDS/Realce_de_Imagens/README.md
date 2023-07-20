@@ -1,6 +1,6 @@
 # Alargamento de Contraste
 
-## Transfomaçao linear
+## Transfomação linear
 ![Imagem](Linear.png)
 
 
