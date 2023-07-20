@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Carrega a imagem em escala de cinza
-img = cv2.imread('lena.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('PDS/lena.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Calcula o alargamento de contraste logarítmico
 a = 255 / np.log(1 + np.max(img))
