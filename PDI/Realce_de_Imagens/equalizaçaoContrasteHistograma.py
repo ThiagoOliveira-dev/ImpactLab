@@ -1,7 +1,7 @@
 import cv2
 
 # Carrega a imagem em escala de cinza
-img = cv2.imread('PDS/lena.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('PDI/lena.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Aplica a equalização de contraste por histograma
 equalized_image = cv2.equalizeHist(img)

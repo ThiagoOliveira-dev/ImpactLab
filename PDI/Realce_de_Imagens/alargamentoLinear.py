@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('PDS/lena.jpg',0)
+img = cv2.imread('PDI/lena.jpg',0)
 print(img)
 
 min_val = np.min(img)

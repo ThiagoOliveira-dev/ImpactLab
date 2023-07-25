@@ -4,7 +4,7 @@ import numpy as np
 
 
 # Carrega a imagem
-img = cv2.imread('PDS/lena.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('PDI/lena.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Aplica o alargamento de contraste exponencial
 # Normaliza a imagem para o intervalo [0, 1]

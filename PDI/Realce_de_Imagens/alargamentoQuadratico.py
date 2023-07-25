@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Carrega a imagem em escala de cinza
-img = cv2.imread('PDS/lena.jpg', 0)
+img = cv2.imread('PDI/lena.jpg', 0)
 
 # Calcula o alargamento de contraste quadrático
 a = 0.1
