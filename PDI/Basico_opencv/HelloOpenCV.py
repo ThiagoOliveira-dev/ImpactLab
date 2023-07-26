@@ -5,7 +5,7 @@ import cv2
 # parametros:
 # 0 - carrega a imagem em escala de cinza
 # 1 - carrega a imagem no padrão RGB
-img = cv2.imread("PDS/lena.jpg", 1) 
+img = cv2.imread("PDI/lena.jpg", 1) 
 print("Bem vindo ao Python com OPenCV\n")
 
 # Redimensiona a imagem em 50%

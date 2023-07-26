@@ -6,7 +6,7 @@ print(webcam.isOpened()) # retorna True se tem a conexão com a webcam do comput
 
 if webcam.isOpened:
     validaçao, frame = webcam.read() # Retorna a tupla (True ou false, Array), o primeiro parametro é em relação se conseguiu 
-                                     # ler o frame da webcam, o segundo paramentro é uma matriz relacionada ao frame do video.
+                                     # ler o frame da webcam, o segundo paramentro é uma matriz relacionada ao frame do video
     while validaçao:
         cv2.imshow("Video",frame)
         key = cv2.waitKey(1) # espera 1 ms para cada frame e retorna a tecla pressionada do teclado
