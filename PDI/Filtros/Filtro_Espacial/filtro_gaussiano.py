@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-# Filtro passa-baixa
+# Filtro passa-baixa linear
 # Suaviza o ruído
 
 img = cv2.imread("PDI/Filtros/ruido.jpg")
